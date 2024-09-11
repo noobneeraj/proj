@@ -12,5 +12,5 @@ FROM gcr.io/distroless/python3
 
 WORKDIR /app
 COPY --from=builder /app /app
-
-CMD ["python3", "manage.py", "runserver", "0.0.0.0:8000"]
+ENTRYPOINT ["python3"]
+CMD ["manage.py", "runserver", "0.0.0.0:8000"]
